@@ -121,51 +121,7 @@ when an exception is raised at step N, you don't need to run from setup 1 to N.
 Botflow will replay the data from nearest completed node, usually step N-1.
 It will save a lot of time in the development phase.
 
-Release
 
-:**0.2.0**: Milestone release.:
-
-            # Jupyter support. Able to run inside Jupyter note book.
-
-            # pipe can be nest in another Pipe.
-
-
-            p1=Pipe(get_image)
-            p2=Pipe(get_price)
-            p_get_all=Pipe(Zip(p1,p2)).Filter
-
-            # Support Chain style pipe line creating.
-
-                Pipe(range(1,10)).Map(lambda x:x+1).Fiter(lambda x:x>2)
-
-                same as :
-
-                Pipe(range(1,10),lambda x:x+1,Filter(lambda x:x>2))
-
-
-
-:**0.1.9**: Major change see below .:
-
-            # Backpressure rate limit support
-
-            # Httpserver support
-
-            # new Node support. *Zip*, *SendTo* *Flat* for make loop and redirect the flow
-
-            # Type hints support .for function type route
-
-            # reorge the source code for readable.
-
-
-:**0.1.8**: http://docs.botflow.org/en/latest/change/0.1.8.html .:
-            
-            #. Support parallel in ThreadPool for slow function.
-            
-            #. Loop Node  is  deprecated. raw value and Iterable value can be used directly.
-            
-            #. improve performance of BlockedJoin
-            
-:**0.1.7**: 
 
 
 RoadMap
